@@ -1,0 +1,16 @@
+# GRAINLIGHT support links.
+#
+# custom: points at the project's own support page, which lists every
+# way to help fund this and future projects (GitHub Sponsors, Ko-fi,
+# PayPal) and stays up to date as those get set up.
+#
+# Once you've enrolled in GitHub Sponsors and created Ko-fi / PayPal.me,
+# you can ALSO uncomment the matching line(s) below so GitHub's own
+# "Sponsor" button offers them directly (no username = no dead link,
+# so leave a line commented until it's real):
+#
+# github: [claudiofabian-sudo]
+# ko_fi: your-kofi-username
+# custom: ["https://paypal.me/your-paypal-username"]
+
+custom: ["https://claude.ai/code/artifact/ff9db8fa-eec5-4b0a-b70d-caf9f123894a"]

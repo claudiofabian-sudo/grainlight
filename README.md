@@ -1,196 +1,201 @@
 # 🎞️ GRAINLIGHT
 ### *Project your films with an analog soul.*
 
-*(también conocido como 35MM Emulator — icono en `grainlight.ico`, acceso
-directo `GRAINLIGHT.lnk`; si mueves la carpeta, ejecuta
-`Crear acceso directo GRAINLIGHT.bat` para regenerarlo. Material
-promocional en inglés en la carpeta `promocion\`.)*
+[![License: MIT](https://img.shields.io/badge/license-MIT-e9a23b.svg)](LICENSE)
+[![Platform: Windows](https://img.shields.io/badge/platform-Windows-blue.svg)](#installation-one-time)
+[![Built on mpv](https://img.shields.io/badge/built%20on-mpv-333333.svg)](https://mpv.io)
+[![Support the project](https://img.shields.io/badge/♥-Support%20this%20project-e9a23b.svg)](https://claude.ai/code/artifact/ff9db8fa-eec5-4b0a-b70d-caf9f123894a)
 
-Reproduce tus remux digitales **con la calidad original intacta** y una capa de
-emulación de proyección 35mm aplicada **en tiempo real sobre la GPU**. Nada se
-re-codifica, nada se pierde: el archivo se decodifica bit-perfect y los shaders
-añaden encima grano, gate weave, parpadeo de lámpara, halation, viñeta, polvo y
-pelusas — como una copia de cine proyectada en los 2000s.
+Plays your digital remuxes **at their original quality** and adds a layer of
+real-time 35 mm projection emulation, **rendered live on your GPU**. Nothing
+is re-encoded, nothing is lost: the file decodes bit-perfect, and shaders
+add organic grain, gate weave, lamp flicker, halation, vignette, dust and
+hairs on top — like a 2000s movie-theater print.
 
-> ⚠️ **Importante:** esto corre en el **PC** (conectado por HDMI al proyector).
-> El Zidoo no puede ejecutar estos shaders — para usar el look 35mm, proyecta
-> desde el PC. El motor gráfico (mpv + libplacebo) tiene una calidad de
-> escalado y reproducción igual o superior a la del Zidoo.
+*(Icon in `grainlight.ico`, shortcut launcher `GRAINLIGHT.lnk` — if you move
+the folder, run `Crear acceso directo GRAINLIGHT.bat` to regenerate it.
+Promo material in `promocion/`.)*
 
-## Instalación (una sola vez)
+> ⚠️ **This runs on your PC** (connected to the projector over HDMI), not on
+> a network player like a Zidoo — those can't run GLSL shaders. mpv's
+> graphics engine (libplacebo) matches or beats dedicated players for
+> scaling and playback quality anyway.
 
-1. Descarga mpv para Windows (build de shinchiro, archivo
-   `mpv-x86_64-...7z`) desde:
+## Support this project
+
+GRAINLIGHT is free and always will be. If it's useful to you, here's every
+way to help fund it — and whatever comes next:
+**[claude.ai/code/artifact/…](https://claude.ai/code/artifact/ff9db8fa-eec5-4b0a-b70d-caf9f123894a)**
+
+## Installation (one time)
+
+1. Download mpv for Windows (shinchiro's build, file
+   `mpv-x86_64-...7z`) from:
    https://github.com/shinchiro/mpv-winbuild-cmake/releases
-2. Extrae **mpv.exe** dentro de la carpeta `mpv\` de este proyecto
-   (debe quedar `mpv\mpv.exe`, junto a la carpeta `mpv\portable_config`).
-3. Listo. Doble clic en **35MM Player.bat**.
+2. Extract **mpv.exe** into this project's `mpv\` folder
+   (you should end up with `mpv\mpv.exe`, next to `mpv\portable_config`).
+3. Done. Double-click **35MM Player.bat**.
 
-## Uso
+## Usage
 
-- Doble clic en `35MM Player.bat` → se abre un diálogo para elegir la película.
-- También puedes **arrastrar un .mkv encima del .bat**.
-- Arranca en pantalla completa con el **Preset 2 (Cine 2000s)** activo.
+- Double-click `35MM Player.bat` → a file picker opens to choose a movie.
+- You can also **drag an .mkv onto the .bat**.
+- Starts in fullscreen with **Preset 2 (2000s Cinema)** active.
 
-### Teclas
+### Keys
 
-| Tecla | Función |
-|-------|---------|
-| **0** | **NADA DE NADA** — quita imagen 35mm, audio análogo, ambient y ajustes: remux 100% puro |
-| **1** | Preset 1 · **Sutil** — grano fino Vision3, weave imperceptible |
-| **2** | Preset 2 · **Cine 2000s** — print con contraste, halation, polvo ocasional |
-| **3** | Preset 3 · **Copia veterana** — grano grueso, parpadeo, polvo y pelusas |
-| **4** | Preset 4 · **Equilibrado** — los colores del preset 2 (print cálido + halation) con el grano grueso, pelusas y weave del preset 3 |
-| **7** | Audio · **Limpio** — pista original del remux |
-| **8** | Audio · **Óptico 35mm** — banda óptica de sala: compresión de cine, agudos redondeados |
-| **9** | Audio · **Vinilo** — wow de 33rpm, calidez armónica |
-| **+ / -** | Subir / bajar volumen |
-| **m** / click der. | **Menú** — presets, pistas de audio, subtítulos, ambient, abrir película |
-| **b** | Alternar modos **ambient** (off, ambilight, difuminado, sutil) |
-| **M** | Silencio |
-| **a** | Cambiar pista de audio |
-| **s** / **S** | Cambiar / ocultar subtítulos |
-| **n** | Subtítulos estilo **cine 35mm** — tipografía de sala e impresos en la película (con grano encima) |
-| **t / T** | Subir / bajar los subtítulos (útil si la película trae barras codificadas) |
-| **Espacio** | Pausa |
-| **← →** | Saltar ±10 s · **↑ ↓** ±60 s |
-| **f** | Pantalla completa |
-| **i** | Estadísticas técnicas (bitrate, fps, códec…) |
-| **r** | Restablecer imagen (si tocaste brillo/contraste/gamma sin querer) |
-| **q** | Salir guardando la posición |
+| Key | Function |
+|-----|----------|
+| **0** | **CLEAN SLATE** — removes 35mm image, analog audio, ambient and any adjustments: 100% pure remux |
+| **1** | Preset 1 · **Subtle** — fine Vision3-style grain, imperceptible weave |
+| **2** | Preset 2 · **2000s Cinema** — print with contrast, halation, occasional dust |
+| **3** | Preset 3 · **Worn Print** — coarse grain, flicker, dust and hairs |
+| **4** | Preset 4 · **Balanced** — preset 2's warm print colors with preset 3's coarse grain, hairs and weave |
+| **7** | Audio · **Clean** — original remux track |
+| **8** | Audio · **35mm Optical** — theater optical band: cinema compression, rounded highs |
+| **9** | Audio · **Vinyl** — 33rpm wow, harmonic warmth |
+| **+ / -** | Volume up / down |
+| **m** / right-click | **Menu** — presets, audio/subtitle tracks, ambient, open file |
+| **b** | Cycle **ambient** modes (off, ambilight, blurred, subtle) |
+| **M** | Mute |
+| **a** | Cycle audio track |
+| **s** / **S** | Cycle / hide subtitles |
+| **n** | **Cinema-style subtitles** — theater typeface, printed into the film (with grain on top) |
+| **t / T** | Raise / lower subtitles (useful if the film has baked-in bars) |
+| **Space** | Pause |
+| **← →** | Seek ±10 s · **↑ ↓** ±60 s |
+| **f** | Fullscreen |
+| **i** | Technical stats (bitrate, fps, codec…) |
+| **r** | Reset image (if you bumped brightness/contrast/gamma by accident) |
+| **q** | Quit, saving position |
 
-## Qué emula cada capa
+## What each layer emulates
 
-| Capa | Qué hace |
-|------|----------|
-| **Grano** | Grano v2: hash entero PCG (sin patrones ni bandas posibles) + 3 octavas de ruido interpolado que aproximan la distribución gaussiana de los cristales de plata reales, más una chispa fina por píxel. Más denso en medios tonos, con leve variación de color por canal. Se aplica *después* del escalado para que quede nítido a la resolución del proyector. |
-| **Gate weave** | Deriva lenta + micro-temblor por fotograma de la imagen, como el arrastre mecánico del proyector. |
-| **Parpadeo** | Fluctuación sutil de brillo de la lámpara. |
-| **Curva S + saturación** | La respuesta de contraste de un print fotoquímico: negros con cuerpo, color más vivo, ligera calidez de lámpara. |
-| **Halation** | Halo cálido alrededor de las altas luces (rebote de luz en la base del film). |
-| **Viñeta** | Caída de luz suave en las esquinas, propia de la óptica de proyección. |
-| **Polvo y pelusas** | Motas y pelos que aparecen 1-2 fotogramas, como suciedad en la copia o en la ventanilla. |
-| **Quemaduras de cigarro** | Marcas de cambio de rollo arriba a la derecha, como en las salas reales: una de aviso y otra 8 s después, de 4 fotogramas cada una. Cada 15 min en el preset 2, cada 12 en el 3 (ajustable con `CUE_PERIOD`, en segundos). |
+| Layer | What it does |
+|-------|--------------|
+| **Grain** | v2 grain: integer PCG hashing (no banding, no repeating patterns) + 3 octaves of interpolated noise approximating the Gaussian distribution of real silver-halide crystals, plus a fine per-pixel sparkle. Denser in midtones, with a touch of per-channel color variation. Applied *after* scaling so it stays crisp at your display resolution. |
+| **Gate weave** | Slow drift plus per-frame micro-jitter, like a projector's mechanical pull-down. |
+| **Flicker** | Subtle lamp-brightness fluctuation. |
+| **S-curve + saturation** | A photochemical print's contrast response: solid blacks, livelier color, slight lamp warmth. |
+| **Halation** | A warm halo around highlights (light bouncing off the film base). |
+| **Vignette** | Soft light falloff in the corners, from the projection lens. |
+| **Dust & hairs** | Specks and fibers that last 1–2 frames, like debris on the print or in the gate. |
+| **Cue marks** | Reel-change marks in the top-right corner, just like real theaters: a warning dot and, 8 s later, a change dot, 4 frames each. Every 15 min on preset 2, every 12 on preset 3 (tunable via `CUE_PERIOD`, in seconds). |
 
-## Audio análogo (teclas 7 / 8 / 9)
+## Analog audio (keys 7 / 8 / 9)
 
-Igual que el video: la pista se decodifica intacta y los filtros se aplican
-en tiempo real (script `scripts/audio-presets.lua`). Compatible con 5.1.
+Same principle as the video: the track decodes intact and filters apply in
+real time (`scripts/audio-presets.lua`). Works with 5.1.
 
-- **8 · Óptico 35mm** — respuesta en banda de una pista óptica de sala
-  (55 Hz–9.5 kHz), realce de presencia en 2.2 kHz (inteligibilidad de
-  diálogo) y compresión suave de cine.
-- **9 · Vinilo** — calidez en graves (90 Hz), wow sutil a 0.55 Hz (como un
-  plato de 33rpm) y un toque de brillo armónico muy discreto.
-- **7 · Limpio** — vuelve a la pista original al instante.
+- **8 · 35mm Optical** — the band response of a theater optical track
+  (55 Hz–9.5 kHz), a presence lift at 2.2 kHz for dialogue clarity, and
+  gentle cinema-style compression.
+- **9 · Vinyl** — low-end warmth (90 Hz), a subtle 0.55 Hz wow (like a
+  33rpm turntable), and a light touch of harmonic sheen.
+- **7 · Clean** — back to the original track instantly.
 
-El carácter de ambos viene de ecualización con forma, no de saturación: hay
-un limitador transparente al final (`alimiter`) que solo evita picos, sin
-añadir distorsión. Si aun así algo no te convence, dime si lo notas duro,
-apagado o con eco raro — no puedo escucharlo yo mismo, así que la
-descripción es la que me guía para el siguiente ajuste.
+Both presets get their character from shaped EQ, not saturation — there's a
+transparent limiter (`alimiter`) at the end that only catches peaks, adding
+no distortion of its own.
 
-Los parámetros (frecuencias, profundidad del wow…) se editan
-en `mpv\portable_config\scripts\audio-presets.lua`.
+Parameters (frequencies, wow depth…) live in
+`mpv\portable_config\scripts\audio-presets.lua`.
 
-## Subtítulos estilo cine 35mm (tecla n o desde el menú)
+## Cinema-style subtitles (key n or from the menu)
 
-Dos cosas a la vez: tipografía de sala (marfil cálido con contorno fino
-oscuro, como los subtítulos grabados en las copias) y fusión de los
-subtítulos con el fotograma **antes** de los shaders — el grano, el polvo y
-hasta las quemaduras caen también sobre las letras, como si estuvieran
-impresas en la película. Para lograrlo cambia temporalmente al renderizador
-clásico (`vo=gpu`, el único que lo permite; la pantalla parpadea un instante
-al activar/desactivar) y lo restaura al salir. Colores en
-`mpv\portable_config\scripts\sub-style-35mm.lua`.
+Two things at once: a theater typeface (warm ivory with a thin dark outline,
+like subtitles burned into a print) and blending the subtitles into the
+frame **before** the shaders run — grain, dust, even cue marks fall on the
+letters too, as if they were printed into the film. To pull that off it
+switches temporarily to the classic renderer (`vo=gpu`, the only one that
+supports it; the screen flashes once on toggle) and restores the modern one
+on exit. Colors live in `mpv\portable_config\scripts\sub-style-35mm.lua`.
 
-**Tamaño** (menú → Subtítulos → Tamaño): **Pequeño (~4%) / Normal (~5%) /
-Grande (~6.3%) / XL (~7.8%) / XXL (~9.5%)** — porcentaje aproximado de
-altura de mayúsculas respecto a la altura de la **imagen real** (Normal ≈
-estándar de sala). Se aplica siempre (con o sin estilo cine, combinado con
-el anclaje al contenido) y queda guardado.
+**Size** (menu → Subtitles → Size): **Small (~4%) / Normal (~5%) / Large
+(~6.3%) / XL (~7.8%) / XXL (~9.5%)** — approximate capital-letter height
+relative to the height of the **actual picture** (Normal ≈ theater
+standard). Always applied (with or without cinema mode, combined with
+content-anchoring) and remembered.
 
-En todos los submenús la opción activa se marca con `<<`, y **elegir una
-opción no cierra el menú**: puedes probar presets/ambient/tamaños viendo el
-resultado al instante; se cierra solo con Esc, m o volviendo atrás desde el
-nivel principal. ("Abrir película…" sí lo cierra, porque abre el diálogo.)
+In every submenu the active choice is marked with `<<`, and **picking an
+option doesn't close the menu** — try presets/ambient/sizes and see the
+result instantly; it only closes with Esc, m, or backing out from the top
+level. ("Open movie…" does close it, since it opens a file dialog.)
 
-**Fuentes de cine** (menú → Subtítulos → Fuente de cine): tipografías del
-sistema asociadas a la subtitulación/rotulación de películas — Candara
-(estilo grabado láser Titra), Century Gothic (geométrica de cartelas),
-Franklin Gothic Medium (cartelera Hollywood), Tahoma (digital tipo Cinecav),
-Gill Sans MT (copias británicas). La elegida queda guardada.
+**Cinema fonts** (menu → Subtitles → Cinema font): system typefaces tied to
+real film subtitling/titling — Candara (laser-engraved Titra style),
+Century Gothic (geometric title-card look), Franklin Gothic Medium
+(classic Hollywood poster), Tahoma (digital cinema, Cinecav-style), Gill
+Sans MT (British prints). Your pick is remembered.
 
-**Posición**: en modo normal los subtítulos van en la posición clásica de
-cualquier reproductor (abajo, usando las franjas si las hay). El anclaje a
-la imagen solo actúa con el **modo cine** activado:
+**Position**: in normal mode subtitles sit in the classic spot any player
+uses (bottom, using the bars if there are any). Content-anchoring only
+kicks in with **cinema mode** active:
 
-**Anclados al contenido real**: al activar el modo cine se miden las barras
-negras (aunque vengan codificadas dentro del archivo) y los subtítulos se
-colocan a un **6% sobre el borde inferior de la imagen** (aproximado al
-estándar de sala) con **tamaño proporcional a la imagen** — nunca en las
-franjas negras. El margen se ajusta en `MARGIN` dentro de
-`sub-style-35mm.lua`, y con **t / T** puedes retocar la altura al vuelo.
+**Anchored to the real picture**: turning on cinema mode measures the black
+bars (even when they're baked into the file) and places subtitles **6%
+above the bottom of the picture** (close to theater standard) at a **size
+proportional to the picture** — never inside the black bars. The margin is
+`MARGIN` inside `sub-style-35mm.lua`, and **t / T** nudge the height live.
 
-## Modos ambient (tecla b o desde el menú)
+## Ambient modes (key b or from the menu)
 
-Para películas 21:9 (o 4:3) que dejan franjas negras en pantalla 16:9: el
-relleno se genera a partir de la propia película (muy reducida, difuminada y
-re-expandida), y el original se superpone **intacto** encima — cero pérdida.
+For 21:9 (or 4:3) films that leave black bars on a 16:9 screen: the fill is
+generated from the film itself (heavily reduced, blurred, and re-expanded),
+with the original overlaid **untouched** on top — zero quality loss.
 
-1. **Ambilight** — reflejos de color lavados, como la tecnología de los
-   televisores Philips.
-2. **Expansión difuminada** — la película ampliada y desenfocada de fondo.
-3. **Cine sutil** — brillo tenue apenas visible, como el modo ambiente de
-   YouTube.
+1. **Ambilight** — washed color reflections, like Philips TV tech.
+2. **Blurred expansion** — the film enlarged and blurred behind itself.
+3. **Subtle cinema** — a faint glow, barely visible, like YouTube's ambient
+   mode.
 
-**Detección automática de barras codificadas**: la mayoría de remux 21:9
-traen las franjas negras grabadas dentro del video (contenedor 16:9). Se
-analizan automáticamente (~2 s tras abrir la película) y se recortan, con
-dos consecuencias:
+**Automatic baked-in bar detection**: most 21:9 remuxes have the black bars
+recorded right into the video (16:9 container). GRAINLIGHT detects them
+automatically (~2 s after opening the film) and crops them, with two
+consequences:
 
-- Con un preset 35mm activo y **sin** ambient, el grano/polvo/viñeta/
-  quemaduras actúan **solo sobre la imagen real** — las franjas quedan en
-  negro absoluto (las pinta el renderizador, fuera de los shaders).
-- Con un modo **ambient** activo, el relleno ocupa las franjas y los efectos
-  cubren todo el lienzo (a propósito, para que se integre).
+- With a 35mm preset active and ambient **off**, grain/dust/vignette/cue
+  marks act **only on the real picture** — the bars stay pure black
+  (painted by the renderer, outside the shaders).
+- With an **ambient** mode active, the fill takes over the bars and the
+  effects cover the whole canvas (on purpose, so it reads as one image).
 
-La detección necesita ver imagen: si la película arranca con minutos de
-negro, puede no recortar — cambia de preset (tecla 1/2/3) en una escena
-con imagen para re-medir.
+Detection needs to see picture: if a film opens on minutes of black, it may
+not crop yet — switch presets (key 1/2/3) during a lit scene to re-measure.
 
-Requiere copia por CPU del video (`hwdec=auto-copy-safe`, se activa solo);
-en 4K sube algo el uso de procesador. Parámetros (desenfoque, saturación,
-brillo del relleno) en `mpv\portable_config\scripts\ambient-modes.lua`.
+Requires a CPU copy of the video (`hwdec=auto-copy-safe`, enabled
+automatically); on 4K this raises CPU usage somewhat. Parameters (blur,
+saturation, fill brightness) live in
+`mpv\portable_config\scripts\ambient-modes.lua`.
 
-## Idioma de la aplicación
+## App language
 
-En el menú: **Idioma / Language** → Español o English. Se guarda en
-`mpv\portable_config\35mm-prefs.conf` y se recuerda entre sesiones
-(igual que la fuente de subtítulos elegida).
+From the menu: **Idioma / Language** → Spanish or English. Saved to
+`mpv\portable_config\35mm-prefs.conf` and remembered between sessions
+(along with your chosen subtitle font).
 
-## Ajustar a tu gusto
+## Tuning it to taste
 
-Cada preset es un archivo en `mpv\portable_config\shaders\`. Al principio de
-cada bloque hay `#define` con los parámetros (GRAIN, WEAVE, VIGNETTE,
-DUST_PROB…). Edita, guarda y vuelve a pulsar la tecla del preset — se recarga
-al instante, incluso con la película en marcha.
+Each preset is a file in `mpv\portable_config\shaders\`. At the top of each
+block are `#define`s for the parameters (GRAIN, WEAVE, VIGNETTE,
+DUST_PROB…). Edit, save, and press the preset's key again — it reloads
+instantly, even mid-playback.
 
-## Consejos
+## Tips
 
-- Pon la salida de video de Windows (o del proyector) a **23 Hz / 24 Hz** para
-  cadencia de cine perfecta; `video-sync=display-resample` hace el resto.
-- Si usas un **receptor AV** y quieres bitstream (TrueHD/Atmos/DTS-HD),
-  descomenta la línea `audio-spdif=...` en `mpv\portable_config\mpv.conf`.
-- Con material **HDR**: los presets están calibrados para SDR; funcionan en HDR
-  pero el contraste/halation actúan distinto. Si tu proyector es SDR, mpv hace
-  el tone-mapping automáticamente y los presets se ven como se diseñaron.
+- Set Windows' (or the projector's) video output to **23 Hz / 24 Hz** for
+  perfect cinema cadence; `video-sync=display-resample` handles the rest.
+- Using an **AV receiver** and want bitstreaming (TrueHD/Atmos/DTS-HD)?
+  Uncomment the `audio-spdif=...` line in `mpv\portable_config\mpv.conf`.
+- **HDR material**: presets are tuned for SDR; they still work on HDR but
+  contrast/halation behave differently. On an SDR display, mpv tone-maps
+  automatically and the presets look as designed.
 
-## Licencia
+## License
 
-Los archivos propios de GRAINLIGHT (shaders, scripts Lua, configuración,
-lanzadores, icono) están bajo licencia **MIT** — ver [`LICENSE`](LICENSE).
+GRAINLIGHT's own files (shaders, Lua scripts, configuration, launchers,
+icon) are **MIT licensed** — see [`LICENSE`](LICENSE).
 
-**mpv no se incluye en este repositorio.** Es un proyecto de terceros bajo
-licencia GPL-2.0-or-later; descárgalo tú mismo siguiendo las instrucciones de
-arriba. Su licencia es independiente de la de este proyecto.
+**mpv itself is not bundled in this repository.** It's a third-party
+project under the GPL-2.0-or-later license; download it yourself following
+the instructions above. Its license is independent of this project's.
