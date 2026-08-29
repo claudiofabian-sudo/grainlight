@@ -1,0 +1,16 @@
+{
+    "name": "grainlight-promo",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "remotion render GrainlightPromo out/GRAINLIGHT-promo.mp4",
+        "start": "remotion studio"
+    },
+    "dependencies": {
+        "@remotion/cli": "4.0.443",
+        "@remotion/google-fonts": "^4.0.499",
+        "react": "19.0.0",
+        "react-dom": "19.0.0",
+        "remotion": "4.0.443"
+    }
+}

@@ -1,0 +1,42 @@
+# --- mpv en si: binario de terceros (GPL), no se distribuye aqui ---
+# El README explica como descargarlo y colocarlo en mpv\
+mpv/mpv.exe
+mpv/mpv.com
+mpv/*.dll
+mpv/doc/
+mpv/installer/
+mpv/updater.bat
+mpv/mpv/
+
+# --- estado de usuario / cache local, no es parte del proyecto ---
+mpv/portable_config/35mm-prefs.conf
+mpv/portable_config/watch_later/
+mpv/portable_config/cache/
+mpv/portable_config/screenshots/
+
+# --- configuracion local de la herramienta, no del proyecto ---
+.claude/
+
+# --- material promocional: video final y metraje de peliculas con derechos ---
+# (grande, y las capturas de las peliculas no se redistribuyen)
+promocion/GRAINLIGHT-promo.mp4
+promocion/stills/
+promocion/remotion-project/public/*.mp4
+promocion/remotion-project/node_modules/
+promocion/remotion-project/out/
+
+# --- accesos directos y basura de Windows ---
+*.lnk
+Thumbs.db
+desktop.ini
+
+# --- si alguna vez trabajas el proyecto Remotion aqui mismo ---
+node_modules/
+out/
+srcclips/
+cap-*/
+cap2-*/
+cap3-*/
+cap4-*/
+cap5-*/
+cap6-*/

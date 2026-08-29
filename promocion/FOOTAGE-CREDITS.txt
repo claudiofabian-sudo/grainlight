@@ -1,0 +1,29 @@
+GRAINLIGHT promo film — credits
+================================
+
+FOOTAGE
+  "Tears of Steel" (2012)
+  (CC) Blender Foundation | mango.blender.org
+  Licensed under Creative Commons Attribution 3.0
+  https://creativecommons.org/licenses/by/3.0/
+
+  Shown two ways:
+   - "before" clips are the untouched master
+   - "after" clips are the real output of the GRAINLIGHT shaders
+     (Balanced preset), captured frame by frame from the player.
+     Both are frame-aligned, so the comparison is exact.
+
+MOTION GRAPHICS
+  Built with Remotion (React -> video). Project source in
+  remotion-project/. Remotion is free for individuals and small
+  teams; companies of four or more need a licence:
+  https://remotion.dev/license
+
+TYPEFACE
+  Segoe UI Variable Display (Microsoft, system font).
+
+SOUND
+  Original synthesized projector-room tone: low rumble plus a
+  24 Hz shutter tick. Replace freely with music.
+
+Keep this file alongside any copy or re-upload of the video.

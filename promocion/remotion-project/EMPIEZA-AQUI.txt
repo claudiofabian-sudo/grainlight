@@ -1,0 +1,12 @@
+﻿PROYECTO DE EDICION
+===================
+
+El proyecto COMPLETO y funcional (con dependencias y metraje) esta en:
+
+    C:\glpromo
+
+Abre alli "ABRIR ESTUDIO.bat" para editar el video, o
+"RENDERIZAR VIDEO.bat" para volver a exportarlo.
+
+Esta carpeta es solo una copia del codigo fuente, para archivar o
+compartir: no tiene node_modules ni los clips de video.
