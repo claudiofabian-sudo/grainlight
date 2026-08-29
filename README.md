@@ -4,6 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-e9a23b.svg)](LICENSE)
 [![Platform: Windows](https://img.shields.io/badge/platform-Windows-blue.svg)](#installation-one-time)
 [![Built on mpv](https://img.shields.io/badge/built%20on-mpv-333333.svg)](https://mpv.io)
+[![Watch the demo](https://img.shields.io/badge/YouTube-Watch%20the%20demo-FF0000.svg?logo=youtube&logoColor=white)](https://youtu.be/dEPVlZFU_wQ)
 [![Support the project](https://img.shields.io/badge/♥-Support%20this%20project-e9a23b.svg)](https://claude.ai/code/artifact/ff9db8fa-eec5-4b0a-b70d-caf9f123894a)
 
 Plays your digital remuxes **at their original quality** and adds a layer of
